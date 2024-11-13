@@ -1,5 +1,5 @@
 const reverseString = function(text) {
-    if (text.length === 0) return "No text provided";
+    if (text.length === 0) return "";
     let reverseText = "";
     for(let i = text.length-1; i >= 0; i--) {
         reverseText += text.at(i);
