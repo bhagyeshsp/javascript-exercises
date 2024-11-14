@@ -1,4 +1,13 @@
-const sumAll = function(num1, num2) {
+const sumAll = function(arg1, arg2) {
+    let num1 = 0;
+    let num2 = 0;
+    if (arg1 > arg2) {
+        num1 = arg2;
+        num2 = arg1;
+    } else {
+        num1 = arg1;
+        num2 = arg2;
+    }    
     let sum = 0;
     for(let i = num1; i <= num2; i++ ) {
         sum += i;
