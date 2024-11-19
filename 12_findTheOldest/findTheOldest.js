@@ -3,8 +3,9 @@ const findTheOldest = function (people) {
   let result = "Ab";
   let newArray = [];
   people.forEach((person) => {
-    if (person.yearOfDeath === null) {
-      person.yearOfDeath = new Date();
+    if (!person.yearOfDeath) {
+      let d = new Date();
+      person.yearOfDeath = d.getFullYear();
     }
     person.age = person.yearOfDeath - person.yearOfBirth;
     newArray.push(person);
